@@ -1,0 +1,68 @@
+
+
+/* Colores de la marca (holístico/bienestar) */
+:root {
+  --primary: #8e44ad; /* Un violeta transmutación */
+  --secondary: #f39c12; /* Un dorado abundancia */
+  --bg-color: #fdfbf7; /* Un crema suave para no cansar la vista */
+  --text-color: #2c3e50;
+  --white: #ffffff;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif; 
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 4rem 1.5rem;
+  margin-bottom: 3rem;
+  border-radius: 0 0 50px 50px; 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* LA GRILLA RESPONSIVE (La magia) */
+.catalog-grid {
+  display: grid;
+  /* Esto hace que las columnas se calculen solas según el ancho */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto; /* Centra el contenedor */
+  margin-bottom: 4rem;
+}
+
+/* FOOTER */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 2rem;
+  background-color: #ececec;
+  font-size: 0.9rem;
+}

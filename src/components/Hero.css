@@ -1,0 +1,96 @@
+/* src/components/Hero.css */
+
+/* El botón contenedor */
+.btn-flower {
+  height: 4em;
+  width: 12em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+/* El texto "Ver colección" */
+.text-flower {
+  font-size: 17px;
+  font-weight: 600;
+  z-index: 10;
+  color: #14532d; /* Verde oscuro texto */
+  padding: 8px 24px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: all 0.5s ease;
+  white-space: nowrap;
+}
+
+/* Contenedor de las flores */
+.flower-wrapper {
+  display: grid;
+  grid-template-columns: 1em 1em;
+  position: absolute;
+  transition: grid-template-columns 0.8s ease;
+}
+
+/* PÉTALOS: Acá está la magia verde */
+.petal {
+  height: 1em;
+  width: 1em;
+  border-radius: 40% 70% / 7% 90%;
+  /* CAMBIO A VERDES: De esmeralda a verde lima suave */
+  background: linear-gradient(#10B981, #A7F3D0); 
+  border: 0.5px solid #6EE7B7;
+  z-index: 0;
+  transition: width 0.8s ease, height 0.8s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Posiciones de las flores (tu código original) */
+.flower1 { top: -12px; left: -13px; transform: rotate(5deg); }
+.flower2 { bottom: -5px; left: 8px; transform: rotate(35deg); }
+.flower3 { bottom: -15px; transform: rotate(0deg); }
+.flower4 { top: -14px; transform: rotate(15deg); }
+.flower5 { right: 11px; top: -3px; transform: rotate(25deg); }
+.flower6 { right: -15px; bottom: -15px; transform: rotate(30deg); }
+
+/* Rotaciones de los pétalos */
+.two { transform: rotate(90deg); }
+.three { transform: rotate(270deg); }
+.four { transform: rotate(180deg); }
+
+/* --- HOVER EFFECTS --- */
+.btn-flower:hover .petal {
+  background: linear-gradient(#059669, #6EE7B7); /* Verde más intenso al hover */
+  border: 0.5px solid #34D399;
+}
+
+.btn-flower:hover .flower-wrapper {
+  grid-template-columns: 1.5em 1.5em;
+}
+
+.btn-flower:hover .flower-wrapper .petal {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.btn-flower:hover .text-flower {
+  background: rgba(255, 255, 255, 0.95);
+  color: #064E3B;
+  transform: scale(1.05);
+}
+
+/* Animaciones de rotación al hover */
+.btn-flower:hover .flower1 { animation: flower-spin 15s linear infinite; }
+.btn-flower:hover .flower2 { animation: flower-spin 13s linear infinite reverse; }
+.btn-flower:hover .flower3 { animation: flower-spin 16s linear infinite; }
+.btn-flower:hover .flower4 { animation: flower-spin 17s linear infinite reverse; }
+.btn-flower:hover .flower5 { animation: flower-spin 20s linear infinite; }
+.btn-flower:hover .flower6 { animation: flower-spin 15s linear infinite reverse; }
+
+@keyframes flower-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

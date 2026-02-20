@@ -1,0 +1,82 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff; /* Fondo BLANCO forzado */
+  color: #1f2937; /* Texto gris oscuro (no negro puro para leer mejor) */
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Ocultar la barra de scroll en el carrousel pero permitir deslizar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+
+/* Botón de descarga personalizado para Carito */
+.btn-descarga {
+  font-family: inherit;
+  font-size: 18px;
+  background: #059669; /* El verde esmeralda que venimos usando */
+  color: white;
+  fill: white;
+  padding: 0.8em 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 16px;
+  font-weight: 700;
+  transition: all 0.3s;
+  width: 100%; /* Para que en móvil ocupe el ancho de la tarjeta */
+  max-width: 280px;
+}
+
+.btn-descarga span {
+  display: block;
+  margin-left: 0.5em;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-descarga svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-descarga:hover {
+  background: #047857; /* Un verde un poco más oscuro al pasar el mouse */
+  box-shadow: 0 10px 15px -3px rgba(5, 150, 105, 0.3);
+}
+
+.btn-descarga:hover .svg-wrapper {
+  transform: scale(1.25);
+  transition: 0.5s linear;
+}
+
+.btn-descarga:hover svg {
+  transform: translateX(2.5em) scale(1.1); /* Ajustado para que el icono se mueva al centro */
+  fill: #fff;
+}
+
+.btn-descarga:hover span {
+  opacity: 0;
+  transition: 0.5s linear;
+}
+
+.btn-descarga:active {
+  transform: scale(0.95);
+}

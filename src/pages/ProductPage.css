@@ -1,0 +1,74 @@
+/* src/pages/ProductPage.css */
+
+/* HEADER / NAVBAR */
+.product-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #f0fdf4; /* Verde muy suave */
+  font-family: serif;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #14532d; /* Verde oscuro */
+}
+
+.nav-link-ser {
+  font-size: 1.1rem;
+  color: #059669; /* Verde esmeralda */
+  text-decoration: none;
+  font-style: italic;
+}
+
+/* BOTÓN DE COMPRA (Tu código Uiverse) */
+.btn-compra {
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #40B3A2;
+  min-width: 200px;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  padding: 20px 24px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none; /* Importante porque es un link */
+  transition: opacity 0.3s ease;
+  position: relative;
+}
+
+.btn-compra:hover {
+  opacity: .95;
+}
+
+/* La animación de ondas */
+.animation-ripple {
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  background: rgba(255,255,255,0.3);
+  position: absolute;
+  right: 20px; /* Lo pongo a la derecha */
+  animation: ripple 0.6s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+  }
+}
