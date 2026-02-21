@@ -42,7 +42,7 @@ const ModalCompra = ({ ebook, isOpen, onClose, isRemarketing = false }) => {
         {/* Header del Modal */}
         <div className="flex justify-between items-start mb-6">
           <div className="pr-4">
-            <h2 className="text-2xl font-bold text-gray-800">¡Excelente elección!</h2>
+            <h2 className="text-2xl font-bold text-gray-800">¡HOLIIIII!</h2>
             <p className="text-pink-500 font-medium text-sm mt-1 uppercase tracking-wider">Paso final para tu transformación</p>
           </div>
           <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-3xl transition-colors">&times;</button>
