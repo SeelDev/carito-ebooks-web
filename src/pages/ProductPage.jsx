@@ -1,17 +1,16 @@
-// src/pages/ProductPage.jsx
-import React, { useState, useEffect } from 'react'; // Unifiqué los imports
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ebooks } from '../data/ebooks';
-import Footer from '../components/Footer';
 import ModalCompra from '../components/ModalCompra';
 import './ProductPage.css';
 
 const ProductPage = () => {
   const { id } = useParams();
   
-  // 1. CORRECCIÓN: El estado va ADENTRO del componente
+  // Estado para el modal
   const [showModal, setShowModal] = useState(false);
   
+  // Buscamos el libro por ID
   const libro = ebooks.find((e) => e.id === id);
 
   useEffect(() => {
@@ -46,8 +45,6 @@ const ProductPage = () => {
         {/* --- COLUMNA IZQUIERDA: IMAGEN --- */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
           <div className="relative w-full max-w-[380px] rounded-lg shadow-xl overflow-hidden group bg-white">
-             <div className="absolute inset-0 bg-emerald-900/0 group-hover:bg-emerald-900/0 transition duration-500"></div>
-            
             <img 
               src={libro.imagen} 
               alt={libro.titulo} 
@@ -90,29 +87,26 @@ const ProductPage = () => {
             </div>
           )}
 
-          {/* BOTÓN DE COMPRA */}
+          {/* BOTÓN DE COMPRA CORREGIDO */}
           <button 
-            onClick={() => setShowModal(true)} 
-            className="btn-compra w-full text-center relative overflow-hidden" 
+            onClick={() => setShowModal(true)}
+            className="w-full bg-[#40B3A2] text-white py-4 rounded-xl font-bold hover:bg-[#369a8b] transition-all shadow-lg active:scale-95 text-lg"
           >
-            COMPRAR AHORA
-            <div className="animation-ripple"></div>
+            Comprar ahora
           </button>
           
           <div className="flex items-center justify-center gap-2 mt-4 text-gray-400 text-sm mb-10">
             <span className="text-lg">💳</span>
-            <p>¡Desde Mercado Pago, como quieras!</p>
+            <p>¡Pago seguro por transferencia con 10% OFF!</p>
           </div>
 
-          {/* --- SECCIÓN DE REDES (CENTRADA) --- */}
-          {/* 2. CORRECCIÓN: Ahora esto está prolijamente dentro de la columna derecha */}
+          {/* --- SECCIÓN DE REDES --- */}
           <div className="border-t border-green-100 pt-6 text-center">
             <p className="text-green-800 font-semibold mb-3 text-sm">
               ¿Tenés dudas? Hablemos:
             </p>
             
             <div className="flex flex-wrap gap-3 justify-center">
-              {/* Instagram */}
               <a 
                 href="https://instagram.com/carito.descubrimientodelser" 
                 target="_blank" 
@@ -123,9 +117,8 @@ const ProductPage = () => {
                 @carito.descubrimientodelser
               </a>
 
-              {/* WhatsApp (Con tu número ya puesto) */}
               <a 
-                href="https://wa.me/message/FBYSYJ6OAT77G1" 
+                href="https://wa.me/5491125461422" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-3 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors text-sm shadow-sm"
@@ -136,19 +129,15 @@ const ProductPage = () => {
             </div>
           </div>
 
-        </div> {/* Cierre de Columna Derecha */}
-      </div> {/* Cierre de Container Principal */}
+        </div>
+      </div>
 
-      {/* --- MODAL Y FOOTER (Fuera del container para que no rompan el layout) --- */}
+      {/* MODAL CORREGIDO: Pasamos el objeto 'libro' completo */}
       <ModalCompra 
         isOpen={showModal} 
         onClose={() => setShowModal(false)}
-        linkPago={libro.linkPago}
-        tituloEbook={libro.titulo}
-        ebookId={libro.id}
+        ebook={libro}
       />
-      
-     
       
     </div>
   );
