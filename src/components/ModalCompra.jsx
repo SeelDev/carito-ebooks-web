@@ -1,122 +1,83 @@
- import React, { useState } from 'react';
-{/*import { useNavigate } from 'react-router-dom'; // Aseguramos el import */}
+import React, { useState } from 'react';
 
-// AGREGAMOS ebookId en las props aquí arriba
-const ModalCompra = ({ isOpen, onClose, linkPago, tituloEbook }) => {
-//   const navigate = useNavigate(); // DECLARAMOS el navigate aquí adentro
-  
-  const [formData, setFormData] = useState({
-    Nombre: '',
-    Email: '',
-    Telefono: ''
-  });
-  
-  const [errors, setErrors] = useState({});
-  const [loading, setLoading] = useState(false);
-
-  // La URL del Script la dejamos por si la usás después, pero ahora usás Formspree
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxnwNwloR2Ry8Jnb5K52Wlsu9Y_ERdM-Jx1uhmz0_L_sb0Df-EL6qVPB2pGTFwLoxEa0g/exec"; 
+const ModalCompra = ({ ebook, isOpen, onClose, isRemarketing = false }) => {
+  const [nombre, setNombre] = useState('');
 
   if (!isOpen) return null;
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    if (errors[e.target.name]) {
-      setErrors({ ...errors, [e.target.name]: null });
+  // Calculamos el precio con el 10% de descuento dinámicamente
+  const precioNumerico = parseInt(ebook.precio.replace(/[^0-9]/g, ''));
+  const precioConDescuento = new Intl.NumberFormat('es-AR', {
+    style: 'currency',
+    currency: 'ARS',
+    maximumFractionDigits: 0,
+  }).format(precioNumerico * 0.9);
+
+  const handleWhatsApp = () => {
+    if (!nombre.trim()) {
+      alert("Por favor, ingresá tu nombre para personalizar tu ebook ✨");
+      return;
     }
+
+    const nombreEncoded = encodeURIComponent(nombre.trim());
+    // Seleccionamos el link base (Normal o Remarketing)
+    const baseLink = isRemarketing ? ebook.waLinkRemarketing : ebook.waLink;
+    
+    // Separamos la URL del mensaje para insertar el nombre al inicio
+    const [url, mensaje] = baseLink.split('text=');
+    const nuevoMensaje = `Hola!%20Soy%20${nombreEncoded}.%20${mensaje}`;
+
+    window.open(`${url}text=${nuevoMensaje}`, '_blank');
+    onClose();
+    setNombre(''); // Limpiamos el nombre para la próxima
   };
 
-  const validarFormulario = () => {
-    let newErrors = {};
-    if (!formData.Nombre.trim()) newErrors.Nombre = "¡Ups! Necesitamos tu nombre.";
-    if (!formData.Email.trim()) {
-      newErrors.Email = "El email es obligatorio.";
-    } else if (!/\S+@\S+\.\S+/.test(formData.Email)) {
-      newErrors.Email = "Email no válido.";
-    }
-    if (!formData.Telefono.trim()) newErrors.Telefono = "Dejanos un WhatsApp.";
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!validarFormulario()) return;
-    setLoading(true);
-
-    const data = {
-      Nombre: formData.Nombre,
-      Email: formData.Email,
-      Telefono: formData.Telefono,
-      Ebook: tituloEbook
-    };
-
-    try {
-      // 1. Guardamos los datos en Formspree (o tu Excel)
-      await fetch("https://formspree.io/f/xgolkknd", {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
-
-      // 2. Mandamos directo al pago
-      window.location.href = linkPago;
-      
-    } catch (error) {
-      console.error("Fallo el envío:", error);
-      // Si falla Formspree, lo mandamos igual para no perder la venta
-      window.location.href = linkPago;
-    }
-  };
   return (
-    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-50 p-4 transition-all">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative animate-fade-in-up border-t-4 border-green-500">
-        <button onClick={onClose} className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 font-bold text-xl">✕</button>
-        <h3 className="text-2xl font-serif text-green-900 font-bold mb-2">¡Casi es tuyo! ✨</h3>
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+      <div className="bg-white rounded-2xl p-8 w-full max-w-md shadow-2xl border-t-8 border-pink-300">
         
-        <div className="bg-green-50 p-4 rounded-xl border border-green-100 mb-6 text-sm text-green-800">
-          <p className="font-semibold mb-1">🔒 Tu privacidad es sagrada</p>
-          <p className="opacity-90 leading-relaxed">Solicitamos estos datos únicamente para asegurar la entrega de tu material.</p>
+        <div className="flex justify-between items-start mb-6">
+          <div className="pr-4">
+            <h2 className="text-2xl font-bold text-gray-800">¡Excelente elección!</h2>
+            <p className="text-pink-500 font-medium text-sm mt-1 uppercase tracking-wider">Paso final para tu transformación</p>
+          </div>
+          <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-3xl">&times;</button>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm font-bold text-gray-700 mb-1 ml-1">Nombre completo</label>
-            <input 
-              type="text" name="Nombre" 
-              className={`w-full px-4 py-3 bg-gray-50 border rounded-xl focus:ring-2 outline-none transition ${errors.Nombre ? 'border-red-500 focus:ring-red-200 bg-red-50' : 'border-gray-200 focus:ring-green-500 focus:bg-white'}`}
-              placeholder="Tu nombre acá" onChange={handleChange}
-            />
-            {errors.Nombre && <p className="text-red-500 text-xs mt-1 ml-1 font-semibold">{errors.Nombre}</p>}
-          </div>
+        <div className="bg-pink-50 p-4 rounded-xl mb-6">
+          <p className="text-gray-700 text-center italic">
+            "¿Cómo te llamás? Queremos que tu experiencia con <strong>{ebook.titulo}</strong> sea única."
+          </p>
+        </div>
 
-          <div>
-            <label className="block text-sm font-bold text-gray-700 mb-1 ml-1">Email</label>
-            <input 
-              type="email" name="Email" 
-              className={`w-full px-4 py-3 bg-gray-50 border rounded-xl focus:ring-2 outline-none transition ${errors.Email ? 'border-red-500 focus:ring-red-200 bg-red-50' : 'border-gray-200 focus:ring-green-500 focus:bg-white'}`}
-              placeholder="tu@email.com" onChange={handleChange}
-            />
-            {errors.Email && <p className="text-red-500 text-xs mt-1 ml-1 font-semibold">{errors.Email}</p>}
-          </div>
+        <div className="mb-8">
+          <label className="block text-gray-500 text-sm mb-2 ml-1">Ingresá tu nombre:</label>
+          <input
+            type="text"
+            placeholder="Ej: Selene..."
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
+            className="w-full p-4 border-2 border-pink-100 rounded-xl focus:border-pink-400 outline-none transition-all text-lg shadow-sm"
+            autoFocus
+          />
+        </div>
 
-          <div>
-            <label className="block text-sm font-bold text-gray-700 mb-1 ml-1">Número</label>
-            <input 
-              type="tel" name="Telefono"
-              className={`w-full px-4 py-3 bg-gray-50 border rounded-xl focus:ring-2 outline-none transition ${errors.Telefono ? 'border-red-500 focus:ring-red-200 bg-red-50' : 'border-gray-200 focus:ring-green-500 focus:bg-white'}`}
-              placeholder="Ej: 11 1234 5678" onChange={handleChange}
-            />
-            {errors.Telefono && <p className="text-red-500 text-xs mt-1 ml-1 font-semibold">{errors.Telefono}</p>}
-          </div>
+        <button
+          onClick={handleWhatsApp}
+          className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-5 rounded-2xl shadow-xl transition-all active:scale-95 flex flex-col items-center group"
+        >
+          <span className="text-xl">Comprar por WhatsApp</span>
+          <span className="text-sm font-normal opacity-90 mt-1">
+            Precio con 10% OFF: <strong className="text-white">{precioConDescuento}</strong>
+          </span>
+        </button>
 
-          <button 
-            type="submit" disabled={loading}
-            className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl mt-2 transform hover:-translate-y-1"
-          >
-            {loading ? "Procesando..." : "CONTINUAR AL PAGO →"}
-          </button>
-        </form>
+        <div className="mt-6 flex items-center justify-center space-x-2 text-gray-400">
+          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+          </svg>
+          <span className="text-xs uppercase tracking-widest font-semibold">Pago seguro por transferencia</span>
+        </div>
       </div>
     </div>
   );
