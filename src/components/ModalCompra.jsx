@@ -3,42 +3,44 @@ import React, { useState } from 'react';
 const ModalCompra = ({ ebook, isOpen, onClose, isRemarketing = false }) => {
   const [nombre, setNombre] = useState('');
 
-  // 1. Log para ver en la consola qué está llegando cuando apretás el botón
-  console.log("¿Qué ebook recibí?:", ebook);
+  // 1. Log para ver qué está pasando (lo verás en la consola F12)
+  console.log("Ebook recibido en el Modal:", ebook);
 
-  // 2. VALLA DE SEGURIDAD: 
-  // Si el modal está cerrado O no hay un ebook seleccionado, no mostramos nada.
-  // Esto evita el error de "undefined" que veíamos antes.
+  // 2. LA VALLA DE SEGURIDAD DEFINITIVA
+  // Si el modal está cerrado o el ebook no tiene los datos necesarios, no mostramos NADA.
+  // Esto evita que la pantalla se ponga en blanco.
   if (!isOpen || !ebook || !ebook.precio) return null;
 
   // 3. CÁLCULOS SEGUROS
-  // Como ya pasamos la valla de arriba, acá sabemos que ebook.precio existe.
-  const precioNumerico = parseInt(ebook.precio.replace(/[^0-9]/g, ''));
-  const precioConDescuento = new Intl.NumberFormat('es-AR', {
-    style: 'currency',
-    currency: 'ARS',
-    maximumFractionDigits: 0,
-  }).format(precioNumerico * 0.9);
+  // Usamos un try/catch o validaciones simples para el precio
+  let precioConDescuento = "$ 0";
+  try {
+    const precioNumerico = parseInt(ebook.precio.replace(/[^0-9]/g, ''));
+    precioConDescuento = new Intl.NumberFormat('es-AR', {
+      style: 'currency',
+      currency: 'ARS',
+      maximumFractionDigits: 0,
+    }).format(precioNumerico * 0.9);
+  } catch (error) {
+    console.error("Error al calcular el precio:", error);
+  }
 
   const handleWhatsApp = () => {
     if (!nombre.trim()) {
-      alert("Por favor, ingresá tu nombre para personalizar tu ebook ✨");
+      alert("Por favor, ingresá tu nombre ✨");
       return;
     }
 
     const nombreEncoded = encodeURIComponent(nombre.trim());
-    
-    // Elegimos el link base según si es remarketing o no
     const baseLink = isRemarketing ? ebook.waLinkRemarketing : ebook.waLink;
     
-    // Si el link de WhatsApp tiene el formato esperado, insertamos el nombre
+    // Verificamos que el link exista antes de intentar romperlo con split
     if (baseLink && baseLink.includes('text=')) {
       const [url, mensaje] = baseLink.split('text=');
       const nuevoMensaje = `Hola!%20Soy%20${nombreEncoded}.%20${mensaje}`;
       window.open(`${url}text=${nuevoMensaje}`, '_blank');
     } else {
-      // Si por alguna razón el link está mal formado, abrimos el baseLink tal cual
-      window.open(baseLink, '_blank');
+      window.open(baseLink || "https://wa.me/5491125461422", '_blank');
     }
 
     onClose();
@@ -49,23 +51,20 @@ const ModalCompra = ({ ebook, isOpen, onClose, isRemarketing = false }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
       <div className="bg-white rounded-2xl p-8 w-full max-w-md shadow-2xl border-t-8 border-pink-300">
         
-        {/* Botón Cerrar */}
         <div className="flex justify-between items-start mb-6">
           <div className="pr-4">
             <h2 className="text-2xl font-bold text-gray-800">¡Excelente elección!</h2>
-            <p className="text-pink-500 font-medium text-sm mt-1 uppercase tracking-wider">Paso final para tu transformación</p>
+            <p className="text-pink-500 font-medium text-sm mt-1 uppercase tracking-wider">Paso final</p>
           </div>
-          <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-3xl transition-colors">&times;</button>
+          <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-3xl">&times;</button>
         </div>
 
-        {/* Mensaje Personalizado */}
         <div className="bg-pink-50 p-4 rounded-xl mb-6">
           <p className="text-gray-700 text-center italic">
             "¿Cómo te llamás? Queremos que tu experiencia con <strong>{ebook.titulo}</strong> sea única."
           </p>
         </div>
 
-        {/* Input de Nombre */}
         <div className="mb-8">
           <label className="block text-gray-500 text-sm mb-2 ml-1">Ingresá tu nombre:</label>
           <input
@@ -78,24 +77,15 @@ const ModalCompra = ({ ebook, isOpen, onClose, isRemarketing = false }) => {
           />
         </div>
 
-        {/* Botón WhatsApp */}
         <button
           onClick={handleWhatsApp}
-          className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-5 rounded-2xl shadow-xl transition-all active:scale-95 flex flex-col items-center group"
+          className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-5 rounded-2xl shadow-xl transition-all active:scale-95 flex flex-col items-center"
         >
           <span className="text-xl">Comprar por WhatsApp</span>
           <span className="text-sm font-normal opacity-90 mt-1">
             Precio con 10% OFF: <strong className="text-white">{precioConDescuento}</strong>
           </span>
         </button>
-
-        {/* Garantía de Seguridad */}
-        <div className="mt-6 flex items-center justify-center space-x-2 text-gray-400">
-          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
-          </svg>
-          <span className="text-xs uppercase tracking-widest font-semibold">Pago seguro por transferencia</span>
-        </div>
       </div>
     </div>
   );
