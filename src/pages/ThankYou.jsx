@@ -85,7 +85,7 @@ const ThankYou = () => {
             
             {/* BOTÓN DESCARGAR: Usa el link real de tu data */}
             <a 
-              href={ebookComprado.pdfLink} 
+              href={ebookComprado.linkDescarga} 
               download 
               target="_blank" 
               rel="noopener noreferrer" 
