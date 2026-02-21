@@ -35,7 +35,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ebook/:id" element={<ProductPage />} />
-          <Route path="/gracias" element={<ThankYou />} />
+          <Route path="/gracias/:id" element={<ThankYou />} />
           <Route path="/oferta/:id" element={<Remarketing />} />
         </Routes>
       </div>
