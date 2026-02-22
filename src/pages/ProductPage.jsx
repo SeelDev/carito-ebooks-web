@@ -6,12 +6,20 @@ import './ProductPage.css';
 
 const ProductPage = () => {
   const { id } = useParams();
-  
-  // Estado para el modal
   const [showModal, setShowModal] = useState(false);
   
-  // Buscamos el libro por ID
   const libro = ebooks.find((e) => e.id === id);
+
+  // === FUNCIÓN PARA EL DESCUENTO (Igual que en el Carrusel) ===
+  const getPrecioTransferencia = (precioStr) => {
+    const numerico = parseInt(precioStr.replace(/[^0-9]/g, ''));
+    const descuento = Math.round(numerico * 0.90);
+    return new Intl.NumberFormat('es-AR', { 
+      style: 'currency', 
+      currency: 'ARS', 
+      minimumFractionDigits: 0 
+    }).format(descuento);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -39,10 +47,9 @@ const ProductPage = () => {
         </span>
       </nav>
 
-      {/* CONTENEDOR PRINCIPAL */}
       <div className="container mx-auto px-6 py-12 flex flex-col md:flex-row gap-12 items-start justify-center">
         
-        {/* --- COLUMNA IZQUIERDA: IMAGEN --- */}
+        {/* COLUMNA IZQUIERDA: IMAGEN */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
           <div className="relative w-full max-w-[380px] rounded-lg shadow-xl overflow-hidden group bg-white">
             <img 
@@ -53,15 +60,29 @@ const ProductPage = () => {
           </div>
         </div>
 
-        {/* --- COLUMNA DERECHA: INFO --- */}
+        {/* COLUMNA DERECHA: INFO */}
         <div className="w-full md:w-1/2 max-w-lg mt-2">
           <h1 className="text-4xl md:text-5xl font-serif text-green-950 mb-2 leading-tight">
             {libro.titulo}
           </h1>
           
-          <p className="text-3xl text-[#40B3A2] font-bold mb-6 mt-2">
-            {libro.precio}
-          </p>
+          {/* === NUEVA SECCIÓN DE PRECIOS CON PSICOLOGÍA DEL AHORRO === */}
+          <div className="mb-6 mt-4">
+            <p className="text-gray-400 text-lg line-through leading-none mb-1">
+              {libro.precio}
+            </p>
+            <div className="flex items-baseline gap-3">
+              <p className="text-4xl md:text-5xl text-[#00945E] font-black tracking-tighter">
+                {getPrecioTransferencia(libro.precio)}
+              </p>
+              <span className="text-sm font-bold uppercase text-[#00945E] tracking-wider">
+               con transferencia
+              </span>
+            </div>
+            <p className="text-emerald-700/60 text-xs mt-2 italic">
+            
+            </p>
+          </div>
 
           <p className="text-gray-600 text-lg leading-snug mb-8 whitespace-pre-line">
             {libro.descripcion}
@@ -87,58 +108,42 @@ const ProductPage = () => {
             </div>
           )}
 
-          {/* BOTÓN DE COMPRA CORREGIDO */}
           <button 
             onClick={() => setShowModal(true)}
-            className="w-full bg-[#40B3A2] text-white py-4 rounded-xl font-bold hover:bg-[#369a8b] transition-all shadow-lg active:scale-95 text-lg"
+            className="w-full bg-[#40B3A2] text-white py-4 rounded-xl font-bold hover:bg-[#369a8b] transition-all shadow-lg active:scale-95 text-xl uppercase tracking-widest"
           >
             Comprar ahora
           </button>
           
-          <div className="flex items-center justify-center gap-2 mt-4 text-gray-400 text-sm mb-10">
-            <span className="text-lg">💳</span>
-            <p>¡Pago seguro por transferencia con 10% OFF!</p>
+          <div className="flex items-center justify-center gap-2 mt-4 text-gray-500 text-sm mb-10 bg-emerald-50 py-2 rounded-lg">
+            <span className="text-lg">🛡️</span>
+            <p className="font-medium">Ahorrá un 10% pagando por transferencia bancaria</p>
           </div>
 
-          {/* --- SECCIÓN DE REDES --- */}
+          {/* REDES */}
           <div className="border-t border-green-100 pt-6 text-center">
             <p className="text-green-800 font-semibold mb-3 text-sm">
               ¿Tenés dudas? Hablemos:
             </p>
-            
             <div className="flex flex-wrap gap-3 justify-center">
-              <a 
-                href="https://instagram.com/carito.descubrimientodelser" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-2 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-sm border border-green-200"
-              >
+              <a href="https://instagram.com/carito.descubrimientodelser" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-3 py-2 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-sm border border-green-200">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                 @carito.descubrimientodelser
               </a>
-
-              <a 
-                href="https://wa.me/5491125461422" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors text-sm shadow-sm"
-              >
+              <a href="https://wa.me/5491125461422" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-3 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors text-sm shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                 WhatsApp
               </a>
             </div>
           </div>
-
         </div>
       </div>
 
-      {/* MODAL CORREGIDO: Pasamos el objeto 'libro' completo */}
       <ModalCompra 
         isOpen={showModal} 
         onClose={() => setShowModal(false)}
         ebook={libro}
       />
-      
     </div>
   );
 };
