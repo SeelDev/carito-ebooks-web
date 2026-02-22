@@ -5,13 +5,12 @@ export const ebooks = [
     id: "bitacora",
     titulo: "La verdadera confianza comienza con el autoconocimiento",
     precio: "$ 39.160",
-    descripcion: "¿Cómo te hablás cuando nadie te escucha? Este cuaderno es de autoobservación para limpiar tu mente de frases limitantes y activar tu modo proactivo. Cambiá las frases que te limitan por palabras que abran posibilidades. Empezá a buscar propósitos en el presente. Bajar la intensidad emocional al peso del error.",
+    descripcion: "¿Cómo te hablás cuando nadie te escucha? Este cuaderno es de autoobservación para reprogramar tu mente de creencias limitantes y activar tu modo proactivo. Cambiá las frases que te limitan por palabras que abran posibilidades. Empezá a buscar propósitos en el presente. Bajar la intensidad emocional al peso del error.",
     porque: [
       "Decidís apagar el 'piloto automático' para tomar el <strong>control consciente</strong> de tus días y tus elecciones.",
-      "Te comprometés a hacer el trabajo: no solo leés teoría, sino que agarrás la lapicera para <em>reescribir tu historia</em> con ejercicios prácticos.",
-      "Asumís la responsabilidad de transformar tu diálogo interno: cambiás el 'no puedo' por un plan de acción concreto.",
-      "Querés <strong>resultados tangibles</strong> y usás herramientas como la 'Rueda de Emociones' para gestionar lo que sentís en lugar de evadirlo.",
-      "Entendés que la abundancia y el bienestar son una construcción diaria y estás dispuesta a <strong>invertir tiempo en vos misma</strong>."
+      "Tomás responsabilidad de transformar tu diálogo interno: cambiás el 'no puedo' por un plan de acción concreto.",
+      "Querés <strong>resultados conscientes</strong> y usás herramientas como la 'Rueda de Emociones' para gestionar lo que sentís en lugar de ignorarlo.",
+      "Entendés que la abundancia y el bienestar son una construcción diaria y estás dispuesto/a a <strong>invertir tiempo en vos mismo/a</strong>."
     ],
     imagen: "/images/bitacora.webp",
     linkPago: "LINK_DE_MERCADO_PAGO_AQUI",
@@ -28,10 +27,9 @@ export const ebooks = [
     descripcion: ` Un cuaderno diseñado para registrar tus progresos de tu comunicación asertiva con tus vínculos y con vos mismo. Empezá a entrenar tu dialogo interno y externo de manera asertiva.`,
     porque: [
       "Decidís que tu 'SÍ' y tu 'NO' tengan valor: aprendés a <strong>poner límites</strong> sin sentir culpa ni dar explicaciones innecesarias.",
-      "Te hacés cargo de tus emociones antes de hablar, para responder con <em>inteligencia</em> en lugar de reaccionar desde el impulso.",
-      "Dejás de esperar que los demás adivinen lo que te pasa y asumís la <strong>responsabilidad de expresarlo</strong> con claridad.",
-      "Elegís salir de los roles infantiles (sumisa o agresiva) para comunicarte como una mujer adulta, firme y amorosa.",
-      "Te entrenás en técnicas reales (como las '4 sillas' o el 'No razonado') para tener <strong>conversaciones difíciles</strong> con seguridad y paz."
+      "Sos responsable de tus emociones antes de hablar, para responder con <em>inteligencia</em> en lugar de reaccionar desde el impulso.",
+      "Decidís tener la <strong>responsabilidad de expresar lo que te sucede</strong> con claridad con las demás personas.",
+      "Te entrenás en técnicas reales  para tener <strong>conversaciones desafiantes</strong> con seguridad y paz."
     ],
     imagen: "/images/comunicacionasertiva.webp",
     linkPago: "LINK_DE_MERCADO_PAGO_AQUI",
@@ -45,14 +43,12 @@ export const ebooks = [
     id: "gratitud-consciente",
     titulo: "21 días de gratitud consciente",
     precio: "$ 39.160",
-    descripcion: `¿Cómo te hablás cuando nadie te escucha? Este cuaderno es de autoobservación para limpiar tu mente de frases limitantes y activar tu modo proactivo.`,
+    descripcion: `Este cuaderno es de autoobservación para limpiar tu mente de frases limitantes y activar tu modo proactivo.`,
     porque: [
-      "Tomás la <strong>decisión</strong> de entrenar tu mente para enfocarte en lo que sí hay, en lugar de perder energía en la queja.",
-      "Elegís la gratitud no como una emoción pasajera, sino como una <em>herramienta diaria</em> para elevar tu vibración.",
-      "Te hacés cargo de tu interpretación de la realidad: entendés que <strong>vos creás tu experiencia</strong> según dónde ponés tu atención.",
-      "Decidís salir del victimismo para empezar a ver los aprendizajes ocultos detrás de cada desafío.",
-      "Querés resultados distintos y por eso te comprometés a <strong>practicar</strong> la gratitud consciente hasta que sea tu nuevo hábito natural."
-    ],
+      "Tomás la decisión de entrenar tu mente para enfocarte en lo que realmente te hace bien.",
+      "Elegís la gratitud como una <em>herramienta diaria</em> para elevar tu vibración.",
+      "Querés tu interpretación de la realidad: entendés que <strong>vos creás tu experiencia</strong> según dónde ponés tu atención.",
+      "Decidís salir del victimismo para empezar a ver los aprendizajes ocultos detrás de cada desafío."    ],
     imagen: "/images/gratitudconsciente.webp",
     badgeExtra: "Método integral del Descubrimiento del Ser ",
     linkPago: "LINK_DE_MERCADO_PAGO_AQUI",
@@ -87,9 +83,8 @@ export const ebooks = [
     precio: "$ 41.140",
     descripcion: `Reinventarse no es convertirse en otra persona, es recordar quién sos en esencia. Honrá tus pausas, usá el movimiento físico para destrabar la mente y mirá a la incertidumbre como una puerta abierta.`,
     porque: [
-      "Decidís empezar a <strong>poner límites claros</strong>, entendiendo que decir 'no' es un acto de respeto hacia vos misma.",
-      "Querés dejar de callarte para complacer (sumisión) o explotar (agresión), y elegís la <strong>comunicación asertiva</strong> como tu nueva forma de vida.",
-      "Te hacés 100% responsable de tus palabras y emociones, dejando de culpar al otro por cómo te sentís.",
+      "Decidís empezar a <strong>poner límites claros</strong>, entendiendo que decir 'no' es un acto de respeto hacia vos mismo/a.",
+      "Querés que tus palabras y emociones sean expresadas con claridad.",
       "Buscás la firmeza necesaria para expresar tu verdad, sin perder la <em>amabilidad</em> ni la empatía en el proceso.",
       "Elegís vincularte desde la honestidad y la coherencia, alineando lo que pensás, sentís y hacés."
     ],
@@ -107,11 +102,10 @@ export const ebooks = [
     precio: "$ 40.150",
     descripcion: `Una guía de transformación para desactivar los mecanismos del ego que te limitan. Aprendé a usar la Gratitud Consciente para soltar el control y el miedo al cambio.`,
     porque: [
-      "Tomás el mando de tu mente: querés dejar de ser esclava de tus reacciones automáticas para empezar a <strong>elegir tu respuesta</strong>.",
+      "Tomás el mando de tu mente: querés reprogramar tus reacciones automáticas para empezar a <strong>elegir tu respuesta con más consciencia</strong>.",
       "Decidís dejar de tomarte las cosas de manera personal, entendiendo que el <em>ego</em> busca conflicto donde podrías elegir paz.",
-      "Asumís la responsabilidad de observar tus sombras (celos, control, juicio) sin culpa, para transformarlas en luz.",
-      "Querés soltar la necesidad de 'tener razón' y elegís la libertad de <strong>ser feliz</strong> y estar en calma.",
-      "Buscás entrenar tu consciencia para vivir el presente, desactivando el drama mental que crea sufrimiento innecesario."
+      "Liberar la necesidad de 'tener razón' eligiendo la libertad de <strong>ser feliz</strong> y estar en calma.",
+      "Buscás entrenar tu consciencia para vivir el presente."
     ],
     badgeExtra: "Técnicas de observación + Desapego consciente ",
     imagen: "/images/disolviendoalego.webp",
@@ -125,12 +119,12 @@ export const ebooks = [
     id: "prosperidad",
     titulo: "21 días de gratitud a tu nueva consciencia de prosperidad",
     precio: "$ 43.890",
-    descripcion: `La prosperidad no es algo que se persigue, es una frecuencia que se sintoniza. Creá desde la alineación energética a través de las Leyes Universales.`,
+    descripcion: `La prosperidad es una frecuencia que se sintoniza. Creá desde la alineación energética a través de las Leyes Universales.`,
     porque: [
-      "Entendés que la prosperidad no es suerte, es una <strong>decisión de sintonía</strong>: te hacés cargo de la energía que emitís.",
+      "Entendés que la prosperidad es una <strong>decisión de sintonía</strong>: siendo consciente de la energía que emitís.",
       "Querés dejar de operar desde la carencia y elegís aplicar las <strong>Leyes Espirituales</strong> (como el Mentalismo y la Vibración) a tu favor.",
       "Asumís la responsabilidad de tu realidad financiera y material, reconociendo que tu mundo exterior es un reflejo de tu mundo interior.",
-      "Decidís integrar la espiritualidad con la materia, viviendo la abundancia como un estado natural de tu ser.",
+      "Decidís integrar la espiritualidad, viviendo la abundancia como un estado natural de tu ser.",
       "Buscás coherencia: querés alinear tus pensamientos, emociones y acciones con la frecuencia de la <em>gratitud y la expansión</em>."
     ],
     badgeExtra: "Leyes universales + Reprogramación de abundancia ",
@@ -148,8 +142,8 @@ export const ebooks = [
     descripcion: `Reinventarse no es convertirse en otra persona, es recordar quién sos en esencia. Honrá tus pausas, usá el movimiento físico para destrabar la mente.`,
     porque: [
       "Tomás la <strong>decisión consciente</strong> de dejar atrás la versión de vos que ya no te representa para construir quien querés ser.",
-      "Entendés que reinventarte no es esperar un milagro, sino <em>hacerte cargo</em> de elegir nuevos pensamientos y acciones cada día.",
-      "Querés dejar de repetir patrones del pasado y asumís la <strong>responsabilidad</strong> de diseñar tu propio futuro.",
+      "Entendés que reinventarte es elegir nuevos pensamientos y acciones cada día.",
+      "Querés dejar de repetir patrones del pasado diseñando tu presente.",
       "Elegís celebrar tus logros antes de verlos, entrenando tu mente para <strong>crear certeza</strong> y confianza en tu capacidad.",
       "Buscás herramientas prácticas para sostener tu nueva identidad y no volver atrás ante el primer desafío."
     ],

@@ -12,8 +12,8 @@ const Hero = () => {
         <ul className="flex gap-8 md:gap-12 text-gray-600 font-medium text-sm md:text-base tracking-wide">
           <li><Link to="/" className="hover:text-green-600 transition">Descubrimiento del ser</Link></li>
           <li><a href="#catalogo" className="hover:text-green-600 transition">Ebooks</a></li>
-          <li><Link to="/membresia" className="hover:text-green-600 transition">Membresía</Link></li>
-          <li><Link to="/eventos" className="hover:text-green-600 transition">Eventos</Link></li>
+          <li><Link to="/membresia" className="hover:text-green-600 transition"></Link></li>
+          <li><Link to="/eventos" className="hover:text-green-600 transition"></Link></li>
         </ul>
       </nav>
 
