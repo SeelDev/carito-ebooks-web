@@ -42,7 +42,7 @@ const ModalCompra = ({ ebook, isOpen, onClose, isRemarketing = false }) => {
         {/* Header del Modal */}
         <div className="flex justify-between items-start mb-6">
           <div className="pr-4">
-            <h2 className="text-2xl font-bold text-gray-800">¡CAMBIO FINAL!</h2>
+            <h2 className="text-2xl font-bold text-gray-800">¡Excelente elección!</h2>
             <p className="text-pink-500 font-medium text-sm mt-1 uppercase tracking-wider">Paso final para tu transformación</p>
           </div>
           <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-3xl transition-colors">&times;</button>
@@ -60,7 +60,7 @@ const ModalCompra = ({ ebook, isOpen, onClose, isRemarketing = false }) => {
           <label className="block text-gray-500 text-sm mb-2 ml-1">Ingresá tu nombre:</label>
           <input
             type="text"
-            placeholder="Ej: Selene..."
+            placeholder="Nombre"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
             className="w-full p-4 border-2 border-pink-100 rounded-xl focus:border-pink-400 outline-none transition-all text-lg shadow-sm"

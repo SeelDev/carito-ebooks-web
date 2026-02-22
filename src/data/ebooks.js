@@ -16,7 +16,7 @@ export const ebooks = [
     imagen: "/images/bitacora.webp",
     linkPago: "LINK_DE_MERCADO_PAGO_AQUI",
     linkPagoDescuento: "https://mpago.la/link-con-20-off",
-    badgeExtra: "Integración holística + Reprogramación mental ✨",
+    badgeExtra: "Integración holística + Reprogramación mental",
     linkDescarga: "https://drive.google.com/file/d/1sDlMwCw8P7qcBBAfcJjF3w69w3odtJY2/view?usp=drive_link",
     waLink: "https://wa.me/5491125461422?text=¡Hola!%20Quiero%20obtener%20el%2010%25%20de%20descuento%20para%20el%20ebook:%20La%20verdadera%20confianza%20comienza%20con%20el%20autoconocimiento",
     waLinkRemarketing: "https://wa.me/5491125461422?text=%C2%A1Quiero%20utilizar%20mi%20cup%C3%B3n%20de%2020%25%20de%20descuento%20en%20mi%20siguiente%20ebook:%20La%20verdadera%20confianza%20comienza%20con%20el%20autoconocimiento!"
@@ -24,7 +24,7 @@ export const ebooks = [
   {
     id: "comunicacion-asertiva",
     titulo: "Introducción práctica a la comunicación asertiva",
-    precio: "$ 27.500",
+    precio: "$39.900",
     descripcion: ` Un cuaderno diseñado para registrar tus progresos de tu comunicación asertiva con tus vínculos y con vos mismo. Empezá a entrenar tu dialogo interno y externo de manera asertiva.`,
     porque: [
       "Decidís que tu 'SÍ' y tu 'NO' tengan valor: aprendés a <strong>poner límites</strong> sin sentir culpa ni dar explicaciones innecesarias.",
@@ -36,8 +36,8 @@ export const ebooks = [
     imagen: "/images/comunicacionasertiva.webp",
     linkPago: "LINK_DE_MERCADO_PAGO_AQUI",
     linkPagoDescuento: "https://mpago.la/link-con-20-off",
-    badgeExtra: "Guía de vínculos sanos ✨",
-    linkDescarga: "LINK_DE_DRIVE_AQUI",
+    badgeExtra: "Guía de vínculos sanos ",
+    linkDescarga: "https://drive.google.com/file/d/1YfJOgcT313XZ_aMFD1qkKAmWdG_Puanr/view?usp=sharing",
     waLink: "https://wa.me/5491125461422?text=¡Hola!%20Quiero%20obtener%20el%2010%25%20de%20descuento%20para%20el%20ebook:%20Introducción%20práctica%20a%20la%20comunicación%20asertiva",
     waLinkRemarketing: "https://wa.me/5491125461422?text=%C2%A1Quiero%20utilizar%20mi%20cup%C3%B3n%20de%2020%25%20de%20descuento%20en%20mi%20siguiente%20ebook:%20Introducción%20práctica%20a%20la%20comunicación%20asertiva!"
   },
@@ -93,7 +93,7 @@ export const ebooks = [
       "Buscás la firmeza necesaria para expresar tu verdad, sin perder la <em>amabilidad</em> ni la empatía en el proceso.",
       "Elegís vincularte desde la honestidad y la coherencia, alineando lo que pensás, sentís y hacés."
     ],
-    badgeExtra: "Autoconsciencia plena + Práctica 'Mi ego maestro' ✨",
+    badgeExtra: "Autoconsciencia plena + Práctica 'Mi ego maestro' ",
     imagen: "/images/serasertivo.webp",
     linkPago: "LINK_DE_MERCADO_PAGO_AQUI",
     linkPagoDescuento: "https://mpago.la/link-con-20-off",
@@ -133,7 +133,7 @@ export const ebooks = [
       "Decidís integrar la espiritualidad con la materia, viviendo la abundancia como un estado natural de tu ser.",
       "Buscás coherencia: querés alinear tus pensamientos, emociones y acciones con la frecuencia de la <em>gratitud y la expansión</em>."
     ],
-    badgeExtra: "Leyes universales + Reprogramación de abundancia ✨",
+    badgeExtra: "Leyes universales + Reprogramación de abundancia ",
     imagen: "/images/prosperidad.webp",
     linkPago: "LINK_DE_MERCADO_PAGO_AQUI",
     linkPagoDescuento: "https://mpago.la/link-con-20-off",

@@ -12,6 +12,7 @@ import Remarketing from './pages/Remarketing';
 // Importar Páginas
 import ProductPage from './pages/ProductPage';
 import ThankYou from "./pages/ThankYou";
+import Membresia from './pages/Membresia';
 
 
 // Importar Datos
@@ -37,6 +38,7 @@ function App() {
           <Route path="/ebook/:id" element={<ProductPage />} />
           <Route path="/gracias/:id" element={<ThankYou />} />
           <Route path="/oferta/:id" element={<Remarketing />} />
+          <Route path="/membresia" element={<Membresia />} />
         </Routes>
       </div>
 
