@@ -79,7 +79,7 @@ export const ebooks = [
   },
   {
     id: "ser-asertivo",
-    titulo: "21 días de gratitud a mi ser consciente",
+    titulo: "21 días de gratitud a mi ser asertivo",
     precio: "$ 41.140",
     descripcion: `Reinventarse no es convertirse en otra persona, es recordar quién sos en esencia. Honrá tus pausas, usá el movimiento físico para destrabar la mente y mirá a la incertidumbre como una puerta abierta.`,
     porque: [
