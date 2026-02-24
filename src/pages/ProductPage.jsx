@@ -12,8 +12,9 @@ const ProductPage = () => {
 
   // === FUNCIÓN PARA EL DESCUENTO (Igual que en el Carrusel) ===
   const getPrecioTransferencia = (precioStr) => {
+
     const numerico = parseInt(precioStr.replace(/[^0-9]/g, ''));
-    const descuento = Math.round(numerico * 0.90);
+    const descuento = Math.round(numerico * 0.50); // 50% de descuento
     return new Intl.NumberFormat('es-AR', { 
       style: 'currency', 
       currency: 'ARS', 
@@ -76,7 +77,7 @@ const ProductPage = () => {
                 {getPrecioTransferencia(libro.precio)}
               </p>
               <span className="text-sm font-bold uppercase text-[#00945E] tracking-wider">
-               con transferencia
+              ¡50% con transferencia HOY!
               </span>
             </div>
             <p className="text-emerald-700/60 text-xs mt-2 italic">
@@ -92,7 +93,7 @@ const ProductPage = () => {
           {libro.porque && (
             <div className="mb-8 bg-green-50/50 p-6 rounded-xl border border-green-100">
               <h3 className="text-xl font-serif text-green-800 mb-4 font-semibold">
-                ¿Por qué este ebook es para vos?
+                Este ebook es para vos si querés...
               </h3>
               <ul className="space-y-3">
                 {libro.porque.map((razon, index) => (
@@ -116,8 +117,8 @@ const ProductPage = () => {
           </button>
           
           <div className="flex items-center justify-center gap-2 mt-4 text-gray-500 text-sm mb-10 bg-emerald-50 py-2 rounded-lg">
-            <span className="text-lg">🛡️</span>
-            <p className="font-medium">Ahorrá un 10% pagando por transferencia bancaria</p>
+            <span className="text-lg">✨</span>
+            <p className="font-medium">¡Obtené tu ebook abonando por WhatsApp ahora!</p>
           </div>
 
           {/* REDES */}

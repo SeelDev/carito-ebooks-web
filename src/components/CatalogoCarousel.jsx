@@ -5,13 +5,16 @@ const CatalogoCarousel = ({ listaLibros = [], tituloSeccion }) => {
   
   // Función para calcular el 10% de ahorro para la psicología del dinero
   const getPrecioTransferencia = (precioStr) => {
+// Función para el descuento especial del 50% (SÓLO EVENTO HOY)
+
     const numerico = parseInt(precioStr.replace(/[^0-9]/g, ''));
-    const descuento = Math.round(numerico * 0.90);
+    const descuento = Math.round(numerico * 0.50); // 50% de descuento
     return new Intl.NumberFormat('es-AR', { 
       style: 'currency', 
       currency: 'ARS', 
       minimumFractionDigits: 0 
     }).format(descuento);
+
   };
 
   return (
@@ -34,7 +37,7 @@ const CatalogoCarousel = ({ listaLibros = [], tituloSeccion }) => {
               
               {/* === EL CARTELITO (Badge) - Estilo exacto a la referencia === */}
               <div className="absolute top-4 right-4 z-20 bg-[#00945E] text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-md">
-                -10% TRANSFERENCIA
+                -50% TRANSFERENCIA HOY
               </div>
 
               {/* IMAGEN VERTICAL COMPLETA */}

@@ -4,13 +4,15 @@ export const ebooks = [
   {
     id: "bitacora",
     titulo: "La verdadera confianza comienza con el autoconocimiento",
-    precio: "$ 39.160",
-    descripcion: "¿Cómo te hablás cuando nadie te escucha? Este cuaderno es de autoobservación para reprogramar tu mente de creencias limitantes y activar tu modo proactivo. Cambiá las frases que te limitan por palabras que abran posibilidades. Empezá a buscar propósitos en el presente. Bajar la intensidad emocional al peso del error.",
+    precio: "$ 35.160",
+    descripcion: `Es un cuaderno de autoobservación profunda diseñado para que dejes de vivir en "piloto automático" y empieces a entender cómo tu programación mental dirige tu vida. 
+
+    Lográ alinear tu mente consciente (la que configura tus metas) con tu mente inconsciente (la que realmente consigue los resultados).`,
     porque: [
-      "Decidís apagar el 'piloto automático' para tomar el <strong>control consciente</strong> de tus días y tus elecciones.",
-      "Tomás responsabilidad de transformar tu diálogo interno: cambiás el 'no puedo' por un plan de acción concreto.",
-      "Querés <strong>resultados conscientes</strong> y usás herramientas como la 'Rueda de Emociones' para gestionar lo que sentís en lugar de ignorarlo.",
-      "Entendés que la abundancia y el bienestar son una construcción diaria y estás dispuesto/a a <strong>invertir tiempo en vos mismo/a</strong>."
+"Ponerle nombre preciso a lo que sentís (desde la vulnerabilidad hasta el optimismo), quitándole peso a la confusión.",
+"Registrar y \"limpiar\" esas frases que te decís cuando nadie te escucha, transformándolas en palabras que abran posibilidades.",
+"Reprogramar tu mente para alcanzar activamente tus objetivos.",
+"Observar tus cuatro dimensiones (física, mental, emocional y espiritual) para lograr una coherencia en tu vida."
     ],
     imagen: "/images/bitacora.webp",
     linkPago: "LINK_DE_MERCADO_PAGO_AQUI",
@@ -23,18 +25,21 @@ export const ebooks = [
   {
     id: "comunicacion-asertiva",
     titulo: "Introducción práctica a la comunicación asertiva",
-    precio: "$39.900",
-    descripcion: ` Un cuaderno diseñado para registrar tus progresos de tu comunicación asertiva con tus vínculos y con vos mismo. Empezá a entrenar tu dialogo interno y externo de manera asertiva.`,
+    precio: "$31.900",
+    descripcion: `Un entrenamiento diseñado para que logres la "Expresión Positiva": manifestar con claridad lo que sí querés en tu vida.
+
+     A través de las técnicas del Descubrimiento del Ser, este cuaderno te enseña a equilibrar tus derechos y necesidades con los de los demás, transformando tus vínculos y, sobre todo, tu diálogo interno.`,
     porque: [
-      "Decidís que tu 'SÍ' y tu 'NO' tengan valor: aprendés a <strong>poner límites</strong> sin sentir culpa ni dar explicaciones innecesarias.",
-      "Sos responsable de tus emociones antes de hablar, para responder con <em>inteligencia</em> en lugar de reaccionar desde el impulso.",
-      "Decidís tener la <strong>responsabilidad de expresar lo que te sucede</strong> con claridad con las demás personas.",
-      "Te entrenás en técnicas reales  para tener <strong>conversaciones desafiantes</strong> con seguridad y paz."
+      "Entrenar el \"no razonado\", el \"no temporal\" y el \"no parafraseado\" para asentar tu autonomía con respeto y firmeza.",
+      "Resolver conflictos internos analizando situaciones desde cuatro perspectivas: el observador objetivo, el yo emocional, el yo racional y, finalmente, tu yo sabio.",
+      "Detectar y cambiar palabras que cierran posibilidades como \"pero\", \"intentar\" o \"tengo que\", sustituyéndolas por un habla responsable y proactiva.",
+
+
     ],
     imagen: "/images/comunicacionasertiva.webp",
     linkPago: "LINK_DE_MERCADO_PAGO_AQUI",
     linkPagoDescuento: "https://mpago.la/link-con-20-off",
-    badgeExtra: "Guía de vínculos sanos ",
+    badgeExtra: "Guía de vínculos sanos + Expresión positiva",
     linkDescarga: "https://drive.google.com/file/d/1YfJOgcT313XZ_aMFD1qkKAmWdG_Puanr/view?usp=sharing",
     waLink: "https://wa.me/5491125461422?text=¡Hola!%20Quiero%20obtener%20el%2010%25%20de%20descuento%20para%20el%20ebook:%20Introducción%20práctica%20a%20la%20comunicación%20asertiva",
     waLinkRemarketing: "https://wa.me/5491125461422?text=%C2%A1Quiero%20utilizar%20mi%20cup%C3%B3n%20de%2020%25%20de%20descuento%20en%20mi%20siguiente%20ebook:%20Introducción%20práctica%20a%20la%20comunicación%20asertiva!"
@@ -42,15 +47,18 @@ export const ebooks = [
   {
     id: "gratitud-consciente",
     titulo: "21 días de gratitud consciente",
-    precio: "$ 39.160",
-    descripcion: `Este cuaderno es de autoobservación para limpiar tu mente de frases limitantes y activar tu modo proactivo.`,
+    precio: "$ 38.500",
+    descripcion: `No existe una realidad única, sino percepciones, y que vos sos la responsable de lo que pensás y generás.
+
+    Vas a entrenar a tu mente para validar tus decisiones, reconocer tus talentos y sintonizar con una frecuencia de poder y amor propio.`,
     porque: [
-      "Tomás la decisión de entrenar tu mente para enfocarte en lo que realmente te hace bien.",
-      "Elegís la gratitud como una <em>herramienta diaria</em> para elevar tu vibración.",
-      "Querés tu interpretación de la realidad: entendés que <strong>vos creás tu experiencia</strong> según dónde ponés tu atención.",
-      "Decidís salir del victimismo para empezar a ver los aprendizajes ocultos detrás de cada desafío."    ],
+    "Viajar a tus grandes decisiones pasadas para agradecerlas y reconocer el beneficio que te trajeron, eliminando la duda y el arrepentimiento.",
+    "Aplicar formas de hablarte como \"Gracias por haber decidido (acción) eso me ayudó a...\" para grabar nuevos programas de valoración en tu mente.",
+    "Poner el foco en las oportunidades en lugar de los obstáculos",
+    "Escribir y releer tus progresos para generar una evidencia real de tu transformación, nutriendo tu amor propio día tras día.",
+    ],
     imagen: "/images/gratitudconsciente.webp",
-    badgeExtra: "Método integral del Descubrimiento del Ser ",
+    badgeExtra: "Método integral del Descubrimiento del Ser",
     linkPago: "LINK_DE_MERCADO_PAGO_AQUI",
     linkPagoDescuento: "https://mpago.la/link-con-20-off",
     linkDescarga: "https://drive.google.com/file/d/1m5vWFFpeXDPYkKjHYnShk-VyL4BTaDAx/view?usp=sharing",
@@ -61,15 +69,18 @@ export const ebooks = [
     id: "emociones-mensajeras",
     titulo: "21 días de gratitud a mis emociones mensajeras",
     precio: "$ 42.790",
-    descripcion: `Transformar tu relación con lo que sentís. Gestioná el enojo, la ansiedad y el miedo usando la gratitud para responder con amor y seguridad.`,
+    descripcion: `Todas las emociones son mensajeras de una necesidad no satisfecha o un miedo no reconocido.
+
+     A través de la PNL y los niveles de consciencia, vas a aprender el agua que fluye y transforma. 
+
+     Es la herramienta perfecta para dejar de reaccionar de forma reactiva y empezar a responder desde el amor y la seguridad.`,
     porque: [
-      "Querés tratarte con más <em>gentileza</em> cuando aparecen el enojo o los celos, dejando de juzgarte para empezar a entender qué mensaje te traen.",
-      "Sentís que tu cuerpo te pide una pausa y querés aprender a <strong>escuchar sus mensajes con amor</strong>, liberando esas emociones que guardaste en silencio.",
-      "Soltar con dulzura las cargas del pasado, como la culpa o la vergüenza, para abrazar tu presente con el <strong>corazón más liviano</strong>.",
-      "Buscás reconectar con tu verdadera esencia (tu Yo Superior), dejando atrás el miedo para guiarte por la voz sabia de tu intuición.",
-      "Querés descubrir la <strong>Gratitud Consciente</strong> como un acto de amor propio, transformando el dolor en sabiduría y la autocrítica en compasión."
+    "Identificar pensamientos de control, juicio o comparación y a visualizarlos como nubes que se disuelven, sin dejar que manejen tu vida.",
+    "Transformar el \"Estoy enojada porque...\" en un \"Agradezco comprender mi reacción porque esto me permite elegir actuar con amor\".",
+    "Pasar de la resistencia a la fluidez, imaginando cómo tu cuerpo transmuta la energía densa en paz.",
+    "Preguntarle a la emoción qué mensaje te trae, permitiéndote responder desde tu Yo Superior."
     ],
-    badgeExtra: "Audios y meditaciones + DÍA BONUS ",
+    badgeExtra: "Audios y meditaciones + DÍA BONUS",
     imagen: "/images/emocionesmensajeras.webp",
     linkPago: "LINK_DE_MERCADO_PAGO_AQUI",
     linkPagoDescuento: "https://mpago.la/link-con-20-off",
@@ -81,14 +92,16 @@ export const ebooks = [
     id: "ser-asertivo",
     titulo: "21 días de gratitud a mi ser asertivo",
     precio: "$ 41.140",
-    descripcion: `Reinventarse no es convertirse en otra persona, es recordar quién sos en esencia. Honrá tus pausas, usá el movimiento físico para destrabar la mente y mirá a la incertidumbre como una puerta abierta.`,
+    descripcion: `A través de la PNL y la neurociencia del bienestar, este cuaderno te enseña que la verdadera asertividad nace de la gratitud. 
+
+    Cuando agradecés, el ego se disuelve y tu voz recupera su verdad, permitiéndote poner límites con amor y firmeza.`,
     porque: [
-      "Decidís empezar a <strong>poner límites claros</strong>, entendiendo que decir 'no' es un acto de respeto hacia vos mismo/a.",
-      "Querés que tus palabras y emociones sean expresadas con claridad.",
-      "Buscás la firmeza necesaria para expresar tu verdad, sin perder la <em>amabilidad</em> ni la empatía en el proceso.",
-      "Elegís vincularte desde la honestidad y la coherencia, alineando lo que pensás, sentís y hacés."
+      "Decir \"sí\" o \"no\" basándote en tus necesidades reales, cuidando tu integridad y respetando la del otro.",
+      "Usar estructuras de gratitud para reconocer tus momentos de \"no asertividad\" y transformarlos en nuevas oportunidades de aprendizaje.",
+      "Que tu comunicación deje de ser un juicio y pase a ser una vibración de gratitud que suaviza el cuerpo y aclara la mente.",
+      "Alinear lo que pensás, sentís y hacés para que tus conversaciones desafiantes sean seguras.",
     ],
-    badgeExtra: "Autoconsciencia plena + Práctica 'Mi ego maestro' ",
+    badgeExtra: "Autoconsciencia plena + Práctica 'Mi ego maestro'",
     imagen: "/images/serasertivo.webp",
     linkPago: "LINK_DE_MERCADO_PAGO_AQUI",
     linkPagoDescuento: "https://mpago.la/link-con-20-off",
@@ -100,14 +113,16 @@ export const ebooks = [
     id: "disolver-ego",
     titulo: "21 días disolviendo al ego",
     precio: "$ 40.150",
-    descripcion: `Una guía de transformación para desactivar los mecanismos del ego que te limitan. Aprendé a usar la Gratitud Consciente para soltar el control y el miedo al cambio.`,
+    descripcion: `El ego no es tu esencia, sino una máscara mental o ilusión construida por pensamientos de miedo, comparación y necesidad de control.
+    
+    Aprenderás que "disolver" el ego es aprender a observarlo para que deje de dominar tus decisiones y puedas habitar tu verdadera esencia.`,
     porque: [
-      "Tomás el mando de tu mente: querés reprogramar tus reacciones automáticas para empezar a <strong>elegir tu respuesta con más consciencia</strong>.",
-      "Decidís dejar de tomarte las cosas de manera personal, entendiendo que el <em>ego</em> busca conflicto donde podrías elegir paz.",
-      "Liberar la necesidad de 'tener razón' eligiendo la libertad de <strong>ser feliz</strong> y estar en calma.",
-      "Buscás entrenar tu consciencia para vivir el presente."
+  " Detectar tus pensamientos críticos y reescribirlos nombrándolos explícitamente como la \"voz del ego\" para quitarles poder.",
+  " Utilizar estructuras específicas (como \"Agradezco poder reconocer mi ego cuando...\") para tomar distancia emocional de situaciones conflictivas.",
+  "Reconocer dónde se aloja el ego en tu cuerpo (mandíbula, pecho, estómago) para liberarlo mediante la respiración.",
+   "\"Desaprender\" quién te enseñaron a ser y habitar el \"aquí y ahora\", libre de las narrativas de miedo de la mente.",
     ],
-    badgeExtra: "Técnicas de observación + Desapego consciente ",
+    badgeExtra: "Técnicas de observación + Desapego consciente",
     imagen: "/images/disolviendoalego.webp",
     linkPago: "LINK_DE_MERCADO_PAGO_AQUI",
     linkPagoDescuento: "https://mpago.la/link-con-20-off",
@@ -119,15 +134,17 @@ export const ebooks = [
     id: "prosperidad",
     titulo: "21 días de gratitud a tu nueva consciencia de prosperidad",
     precio: "$ 43.890",
-    descripcion: `La prosperidad es una frecuencia que se sintoniza. Creá desde la alineación energética a través de las Leyes Universales.`,
+    descripcion: `Recorrer las leyes de la espiritualidad para entender que el universo responde a tu energía.
+
+     A través de principios como el Mentalismo y la Vibración, aprenderás a dejar de operar desde la carencia (el miedo a que falte) para empezar a crear desde la abundancia (la certeza de que ya es).
+
+      Es una guía para integrar mente, emoción y acción, logrando que tu realidad material sea un reflejo de tu paz y coherencia interna.`,
     porque: [
-      "Entendés que la prosperidad es una <strong>decisión de sintonía</strong>: siendo consciente de la energía que emitís.",
-      "Querés dejar de operar desde la carencia y elegís aplicar las <strong>Leyes Espirituales</strong> (como el Mentalismo y la Vibración) a tu favor.",
-      "Asumís la responsabilidad de tu realidad financiera y material, reconociendo que tu mundo exterior es un reflejo de tu mundo interior.",
-      "Decidís integrar la espiritualidad, viviendo la abundancia como un estado natural de tu ser.",
-      "Buscás coherencia: querés alinear tus pensamientos, emociones y acciones con la frecuencia de la <em>gratitud y la expansión</em>."
-    ],
-    badgeExtra: "Leyes universales + Reprogramación de abundancia ",
+      "Usar el Mentalismo y la Vibración para que tus pensamientos sean un imán de oportunidades.",
+      "Entrenar la capacidad de dar gracias por lo que aún no ves, generando la certeza para que se manifieste en tu plano físico.",
+      "Reprogramar mis ideas y creencias desde mi alineación energética y mi propósito\".",
+      ],
+    badgeExtra: "Leyes universales + Reprogramación de abundancia",
     imagen: "/images/prosperidad.webp",
     linkPago: "LINK_DE_MERCADO_PAGO_AQUI",
     linkPagoDescuento: "https://mpago.la/link-con-20-off",
@@ -139,15 +156,16 @@ export const ebooks = [
     id: "poder-de-reinventarme",
     titulo: "21 días de gratitud a mi poder de reinventarme",
     precio: "$ 42.240",
-    descripcion: `Reinventarse no es convertirse en otra persona, es recordar quién sos en esencia. Honrá tus pausas, usá el movimiento físico para destrabar la mente.`,
+    descripcion: `Reinventarse es un acto de encuentro con uno mismo, donde aprendés a elegir nuevas formas de pensar, sentir y actuar que te potencien.
+
+     A través de este entrenamiento, la incertidumbre deja de ser un motivo de miedo y se convierte en una puerta abierta a la creatividad y a una vida con mucho más sentido e intención.`,
     porque: [
-      "Tomás la <strong>decisión consciente</strong> de dejar atrás la versión de vos que ya no te representa para construir quien querés ser.",
-      "Entendés que reinventarte es elegir nuevos pensamientos y acciones cada día.",
-      "Querés dejar de repetir patrones del pasado diseñando tu presente.",
-      "Elegís celebrar tus logros antes de verlos, entrenando tu mente para <strong>crear certeza</strong> y confianza en tu capacidad.",
-      "Buscás herramientas prácticas para sostener tu nueva identidad y no volver atrás ante el primer desafío."
-    ],
-    badgeExtra: "Manifestación futura + Carta a mi Yo del Mañana ",
+"Abrir espacio mental para oportunidades que antes no veías.",
+"Aplicar técnicas para que la mente fluya a través del cuerpo, permitiendo que la creatividad se libere cuando te sentís estancado/a.",
+"Agradecer celebrando tus metas como si ya fueran parte de tu realidad, entrenando a tu mente para habitar la energía de la confianza y la realización.",
+"Decidir conscientemente sostener quién elegís ser hoy, creando certeza interna frente a cualquier desafío externo.",
+ ],
+    badgeExtra: "Manifestación futura + Carta a mi Yo del Mañana",
     imagen: "/images/reinventarme.webp",
     linkPago: "LINK_DE_MERCADO_PAGO_AQUI",
     linkPagoDescuento: "https://mpago.la/link-con-20-off",
