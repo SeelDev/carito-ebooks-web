@@ -52,7 +52,7 @@ const FAQ = () => {
         <p>
           <strong>¿Inconvenientes con el acceso?</strong> Podés hablar con soporte por{' '}
           <a 
-            href="https://wa.me/5491125461422" 
+            href="https://wa.me/message/YSAKV5GAHH2TK1" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-green-600 font-bold hover:underline"
