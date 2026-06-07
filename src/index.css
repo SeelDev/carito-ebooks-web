@@ -97,3 +97,51 @@ body {
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 }
+
+
+
+/* Agregar al final de tu index.css */
+.texto-dorado {
+  background: linear-gradient(90deg, #d4af37 0%, #ffdf73 50%, #aa7700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block; /* Esto es clave para que el brillo se vea completo */
+}
+
+/* Animación para el resplandor de la caja */
+@keyframes resplandor-dorado {
+  0%, 100% { 
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2), inset 0 0 10px rgba(212, 175, 55, 0.05); 
+    border-color: rgba(212, 175, 55, 0.3); 
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.6), inset 0 0 20px rgba(212, 175, 55, 0.15); 
+    border-color: rgba(255, 223, 115, 1); 
+  }
+}
+
+.caja-animada {
+  animation: resplandor-dorado 10s infinite ease-in-out;
+}
+
+/* Animación de destello de luz para el botón */
+@keyframes destello-boton {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.boton-destello {
+  background: linear-gradient(90deg, #d4af37 0%, #ffdf73 25%, #d4af37 50%, #aa7700 75%, #d4af37 100%);
+  background-size: 200% auto;
+  animation: destello-boton 10s linear infinite;
+  color: #111; /* Texto oscuro para que resalte en el botón dorado */
+}
+
+@font-face {
+  font-family: 'Carelia';
+  src: url('./assets/fonts/Carelia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

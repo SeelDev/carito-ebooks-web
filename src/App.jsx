@@ -7,18 +7,20 @@ import Hero from './components/Hero';
 import CatalogoCarousel from './components/CatalogoCarousel';
 import FAQ from './components/FAQ';
 import About from './components/About';
-import Footer from './components/Footer'; // <--- 1. IMPORTAMOS EL FOOTER
-import Remarketing from './pages/Remarketing';
+import Footer from './components/Footer'; 
+import Navbar from './components/Navbar'; // <--- AGREGAMOS EL IMPORT DEL NAVBAR
+
 // Importar Páginas
 import ProductPage from './pages/ProductPage';
 import ThankYou from "./pages/ThankYou";
-import Membresia from './pages/Membresia';
-
+import Remarketing from './pages/Remarketing';
+import EventosPage from "./pages/EventosPage"; 
+import MembresiaPage from "./pages/MembresiaPage"; // <--- 1. IMPORTAMOS LA MEMBRESÍA
 
 // Importar Datos
 import { ebooks } from './data/ebooks';
 
-// Página de Inicio
+// Página de Inicio (Ebooks)
 const Home = () => (
   <>
     <Hero />
@@ -31,20 +33,27 @@ const Home = () => (
 function App() {
   return (
     <BrowserRouter>
-      {/* El contenido principal cambia según la ruta */}
-      <div className="min-h-screen"> {/* Esto ayuda a empujar el footer abajo */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/ebook/:id" element={<ProductPage />} />
-          <Route path="/gracias/:id" element={<ThankYou />} />
-          <Route path="/oferta/:id" element={<Remarketing />} />
-          <Route path="/membresia" element={<Membresia />} />
-        </Routes>
-      </div>
+      <div className="min-h-screen flex flex-col"> 
+        {/* Ubicamos el Navbar acá arriba, fuera de Routes, 
+            para que se vea tanto en Ebooks, Eventos y Membresía 
+        */}
+        
+        <Navbar /> {/* <--- 2. AGREGAMOS LA ETIQUETA PARA QUE SE VEA */}
 
-      {/* El Footer va ACÁ, afuera de Routes, para que se vea siempre al final */}
-      <Footer /> 
-      
+        {/* Le sumamos pt-20 (padding-top) por si tu Navbar es fijo y tapa el contenido */}
+        <main className="flex-grow pt-20"> 
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/eventos" element={<EventosPage />} /> 
+            <Route path="/membresia" element={<MembresiaPage />} /> {/* <--- 3. RUTA A MEMBRESÍA */}
+            <Route path="/ebook/:id" element={<ProductPage />} />
+            <Route path="/gracias/:id" element={<ThankYou />} />
+            <Route path="/oferta/:id" element={<Remarketing />} />
+          </Routes>
+        </main>
+
+        <Footer /> 
+      </div>
     </BrowserRouter>
   );
 }

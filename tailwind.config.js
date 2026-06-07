@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        // Esto te permite usar 'font-carelia' en tu HTML
+        carelia: ['Carelia', 'serif'],
+      },
+    },
   },
   plugins: [],
 }
+
+

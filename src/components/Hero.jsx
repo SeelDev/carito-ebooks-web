@@ -6,16 +6,7 @@ import './Hero.css'; // Importamos los estilos del botón
 const Hero = () => {
   return (
     <div className="relative bg-white min-h-screen flex flex-col items-center">
-      
-      {/* 1. NAVBAR / MENÚ SUPERIOR */}
-      <nav className="w-full py-6 px-8 flex justify-center border-b border-green-50 bg-white/80 backdrop-blur-sm fixed top-0 z-50">
-        <ul className="flex gap-8 md:gap-12 text-gray-600 font-medium text-sm md:text-base tracking-wide">
-          <li><Link to="/" className="hover:text-green-600 transition">Descubrimiento del ser</Link></li>
-          <li><a href="#catalogo" className="hover:text-green-600 transition">Ebooks</a></li>
-          <li><Link to="/membresia" className="hover:text-green-600 transition"></Link></li>
-          <li><Link to="/eventos" className="hover:text-green-600 transition"></Link></li>
-        </ul>
-      </nav>
+     
 
       {/* 2. CONTENIDO PRINCIPAL (Con margen arriba para que no lo tape el menú) */}
       <section className="relative w-full flex flex-col items-center pt-32 pb-12 px-4 overflow-hidden text-center">
