@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 
 const GrillaDolores = () => {
   // Lista de dolores con sus respectivos íconos en formato SVG
@@ -59,32 +59,31 @@ const GrillaDolores = () => {
 
   return (
     <section className=" px-6 bg-white">
-      <div className="max-w-2xl mx-auto"> {/* max-w-2xl hace que la lista no se estire demasiado y quede elegante */}
+      <div className="max-w-2xl mx-auto"> 
         
-        {/* Título Principal */}
+       
         <h2 className="text-2xl md:text-3xl text-gray-800 text-center mb-12 font-serif leading-relaxed">
           Este proceso de coaching es para un <span className=" texto-dorado font-bold">tipo de persona</span> muy específica que se observa en:
         </h2>
 
-        {/* Contenedor de la lista vertical */}
+        /*
         <div className="flex flex-col gap-6">
           {dolores.map((dolor) => (
             <div 
               key={dolor.id} 
               className="flex items-center gap-6 p-6 bg-[#fcfbf9] border border-amber-100 rounded-3xl shadow-sm hover:shadow-md transition-shadow"
             >
-              {/* Cajita del ícono dorado */}
+             
               <div className="w-16 h-16 shrink-0 flex items-center justify-center bg-amber-50 rounded-2xl text-amber-600 border border-amber-200/50">
                 {dolor.icon}
               </div>
               
-              {/* Textos */}
-              {/* Textos */}
+              
               <div className="text-left">
-                {/* Título más grande: text-2xl */}
+                
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">{dolor.titulo}</h3>
                 
-                {/* Descripción más grande y clara: text-lg */}
+              
                 <p className="text-gray-600 text-lg leading-relaxed">{dolor.desc}</p>
               </div>
             </div>
@@ -97,3 +96,4 @@ const GrillaDolores = () => {
 };
 
 export default GrillaDolores;
+*/

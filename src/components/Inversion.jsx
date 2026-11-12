@@ -11,9 +11,9 @@ const Inversion = () => {
         
         {/* NUEVA SECCIÓN DE FRASE POTENTE */}
         <div className="mb-16 text-center">
-          <p className="text-gray-200 font-serif italic text-2xl md:text-3xl leading-snug mb-6">
+          {/*<p className="text-gray-200 font-serif italic text-2xl md:text-3xl leading-snug mb-6">
             Lo que necesitás no es más información, necesitás presencia real mientras el cambio ocurre.
-          </p>
+          </p> */}
           <p className="text-amber-500 font-bold uppercase tracking-[0.2em] text-sm md:text-base border-t border-amber-900/50 pt-6">
             ESO ES EXACTAMENTE LO QUE OFRECE ESTE ACOMPAÑAMIENTO
           </p>
