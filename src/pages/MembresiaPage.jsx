@@ -15,7 +15,7 @@ const MembresiaPage = () => {
 
       {/* 1. SECCIÓN HERO */}
       <HeroMembresia />
-      <GrillaDolores />
+      
       <LineaDeTiempo />
       <ComoLoHaremos />
       <QueCambia />

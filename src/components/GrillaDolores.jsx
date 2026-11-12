@@ -1,4 +1,4 @@
-/* import React from 'react';
+ import React from 'react';
 
 const GrillaDolores = () => {
   // Lista de dolores con sus respectivos íconos en formato SVG
@@ -96,4 +96,3 @@ const GrillaDolores = () => {
 };
 
 export default GrillaDolores;
-*/
