@@ -11,15 +11,12 @@ const HeroMembresia = () => {
         
         {/* Título Principal */}
         <h1 className="text-5xl md:text-7xl font-serif mb-6 tracking-tight">
-          {/* Parte dorada: "Manifestá reconociéndote" */}
+          
           <span className="block italic font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-yellow-600 to-amber-800">
-            Manifestá reconociéndote
+            El poder de reinventarte
           </span>
-          {/* Parte sutil: "durante 30 días" (Más chico y sin negrita) */}
-{/* Parte sutil: "durante 30 días" (Ahora mucho más chico y fino) */}
-<span className="block text-lg md:text-xl text-gray-500 font-light mt-4 tracking-widest uppercase">
-  durante 30 días
-</span>
+         
+
         </h1>
 
         <div className="max-w-2xl mx-auto mt-8 mb-10 px-4">
