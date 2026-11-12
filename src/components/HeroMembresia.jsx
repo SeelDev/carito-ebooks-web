@@ -13,7 +13,7 @@ const HeroMembresia = () => {
         <h1 className="text-5xl md:text-7xl font-serif mb-6 tracking-tight">
           
           <span className="block italic font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-yellow-600 to-amber-800">
-            El poder de reinventarte <br> acompañamiento individual hacia tus objetivos </br>
+            El poder de reinventarte
           </span>
          
 
@@ -27,9 +27,8 @@ const HeroMembresia = () => {
     {/* El marco propiamente dicho */}
     <div className="relative bg-white/60 backdrop-blur-sm border border-amber-200/60 rounded-2xl p-6 md:p-8 shadow-sm">
       <p className="text-gray-600 text-lg md:text-xl font-serif italic leading-relaxed">
-        Un acompañamiento diario y personalizado para recuperar{" "}
-        <span className="text-amber-700 font-semibold">claridad, confianza y dirección</span>{" "}
-        en tu vida.
+        Un acompañamiento diario y personalizado e individual hacia tus objetivos {" "}
+        
       </p>
     </div>
   </div>
