@@ -13,7 +13,7 @@ const HeroMembresia = () => {
         <h1 className="text-5xl md:text-7xl font-serif mb-6 tracking-tight">
           
           <span className="block italic font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-yellow-600 to-amber-800">
-            El poder de reinventarte
+            El poder de reinventarte <br> acompañamiento individual hacia tus objetivos </br>
           </span>
          
 
