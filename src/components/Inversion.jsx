@@ -27,7 +27,7 @@ const Inversion = () => {
           {/* Precio */}
           {/* Precio más chico: de text-7xl a text-4xl o 5xl */}
           <p className="texto-dorado font-serif text-4xl md:text-5xl font-bold mb-6">
-            $57.000
+            $65.000
           </p>
           
           <p className="text-gray-400 text-base md:text-lg mb-10 max-w-sm">
